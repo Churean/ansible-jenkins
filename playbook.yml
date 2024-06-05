@@ -1,5 +1,6 @@
 
 - name: install nginx
+  become: true
   hosts: all
   roles:
     - nginx
