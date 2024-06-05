@@ -1,8 +1,9 @@
-
+---
 - name: install nginx
-  become: true
   hosts: all
-  roles:
-    - nginx
-
-
+  become: true
+  tasks:
+    - name: Ensure nginx is installed
+      apt:
+        name: nginx
+        state: present
